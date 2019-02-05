@@ -1,14 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const { getAll, postAll } = require("../../controls");
 
 router
   .route("/user")
-  .get((req, res) => {
-    res.send("Get all users");
-  })
-  .post((req, res) => {
-    res.send("Post all users");
-  });
+  .get(getAll)
+  .post(postAll);
 
 router
   .route("/user/:id")
