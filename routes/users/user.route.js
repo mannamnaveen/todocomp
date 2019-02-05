@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getAll, postAll } = require("../../controls");
+const { getAll, postAll, getOne } = require("../../controls");
 
 router
   .route("/user")
@@ -9,9 +9,7 @@ router
 
 router
   .route("/user/:id")
-  .get((req, res) => {
-    res.send("Get single user");
-  })
+  .get(getOne)
   .put((req, res) => {
     res.send("Put single user");
   })
