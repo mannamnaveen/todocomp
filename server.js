@@ -3,7 +3,7 @@ const cors = require("cors");
 const logger = require("morgan");
 const helmet = require("helmet");
 const { json, urlextended } = require("body-parser");
-const connect = require("./models");
+const { connect } = require("./models");
 
 const app = express();
 
